@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+
+
+<package name="one"  extends="struts-default">
+  <action name="Login" class="action.loginAction">
+  <result name="student">/welcome.jsp</result>
+  <result name="teacher">/teacher.jsp</result>
+  <result name="admin">/admin.jsp</result>
+  <result name="fail">/login.jsp</result>
+  </action>
+  
+ <action name="selectCourse" class="action.selectCourseAction">
+  <result name="true">/welcome.jsp</result>
+  <result name="false">/regcourse.jsp</result>
+  </action>
+  
+  <action name="cancelCourse" class="action.cancelCourseAction">
+  	<result name="success">/welcome.jsp</result>
+  	<result name="fail">/cancelCourse.jsp</result>
+  </action>
+  <action name="studentOfCourse" class="action.t_reg_courseAction">
+  	<result name="success">/t_regCourse.jsp</result>
+  	<result name="fail">/tCourseInfo.jsp</result>
+  
+  </action>
+  <action name="editTrans" class="action.editCourseAction">
+  <result name="success">/t_discreb.jsp</result>
+  </action>
+  <action name="changeDiscrib" class="action.describAction">
+  <result name="success">/teacher.jsp</result>
+  <result name="fail">/t_discreb.jsp</result>
+  </action>
+  <action name="addCourseAction" class="action.addCourseAction">
+  <result name="success">/admin.jsp</result>
+  <result name ="fail">/addCourse.jsp</result>
+  </action>
+  
+    <action name="addStudentAction" class="action.addStudentAction">
+  <result name="success">/admin.jsp</result>
+  <result name ="fail">/addStudent.jsp</result>
+  </action>
+  
+     <action name="addTeacherAction" class="action.addTeacherAction">
+  <result name="success">/admin.jsp</result>
+  <result name ="fail">/addTeacher.jsp</result>
+  </action>
+  <action name="changePwAction" class="action.changePwAction">
+  <result name="fail">/changePw.jsp</result>
+  <result name="student">/welcome.jsp</result>
+  <result name="teacher">/teacher.jsp</result>
+  <result name="admin">/admin.jsp</result>
+  </action>
+  </package>
+</struts>    
